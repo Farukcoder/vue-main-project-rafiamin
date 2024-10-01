@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header/>
+    <app-header />
     <p>{{ name }}</p>
     <p>{{ age }}</p>
     <app-footer />
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import AppHeader from './Components/Header_footer/AppHeader.vue'
 import AppFooter from './Components/Header_footer/AppFooter.vue'
 export default {
   data() {
@@ -17,7 +18,12 @@ export default {
     }
   },
   components:{
+    AppHeader,
     AppFooter
   }
 }
 </script>
+
+<style>
+
+</style>
