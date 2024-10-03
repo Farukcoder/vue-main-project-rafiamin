@@ -1,9 +1,9 @@
 <template>
   <div>
-    <app-header />
+    <AppHeader :myStudents="students" />
     <p>{{ name }}</p>
     <p>{{ age }}</p>
-    <app-footer />
+    <AppFooter />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import AppFooter from './Components/Header_footer/AppFooter.vue'
 export default {
   data() {
     return {
-      name: 'Faruk',
+      students: ['faruk', 'nasir', 'talha'],
       age: 25
     }
   },
