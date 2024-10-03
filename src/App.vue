@@ -1,8 +1,11 @@
 <template>
   <div>
-    <AppHeader :myStudents="students" />
-    <p>{{ name }}</p>
-    <p>{{ age }}</p>
+    <AppHeader
+      :firstName="fName"
+      :lastName="lName"
+      :age = "age"
+      @updateName = "fName = $event"
+    />
     <AppFooter />
   </div>
 </template>
@@ -13,7 +16,8 @@ import AppFooter from './Components/Header_footer/AppFooter.vue'
 export default {
   data() {
     return {
-      students: ['faruk', 'nasir', 'talha'],
+      fName: "Omar",
+      lName: "Faruk",
       age: 25
     }
   },
