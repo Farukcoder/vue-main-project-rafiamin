@@ -1,22 +1,21 @@
 <template>
   <div>
     <p>FirstName: {{firstName}}</p>
-    <p>LastName: {{lastName}}</p>
-    <p>Age: {{age}}</p>
     <button @click="updateName">Click me</button>
+    <hr>
   </div>
 </template>
 
 <script>
+import {bus} from "../../main"
 export default {
   props: {
     firstName: String,
-    lastName: String,
-    age: Number
   },
   methods:{
     updateName(){
-      this.$emit('updateName',"Nasir")
+      // eslint-disable-next-line vue/no-mutating-props
+      bus.$emit('updateName',this.firstName = "jack")
     }
   }
 }

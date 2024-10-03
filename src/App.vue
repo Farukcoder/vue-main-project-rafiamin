@@ -2,11 +2,10 @@
   <div>
     <AppHeader
       :firstName="fName"
-      :lastName="lName"
-      :age = "age"
-      @updateName = "fName = $event"
     />
-    <AppFooter />
+    <AppFooter
+    :lastName="lName"
+    />
   </div>
 </template>
 
